@@ -7,23 +7,24 @@ use yii\db\Migration;
  */
 class m220303_230319_create_perfil_table extends Migration
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function safeUp()
-    {
-        $this->createTable('{{%perfil}}', [
-            'id' => $this->primaryKey(),
-            'name' => $this->string(),
-            'password' => $this->string()
-        ]);
-    }
+  /**
+   * {@inheritdoc}
+   */
+  public function safeUp()
+  {
+    $this->createTable('{{%perfil}}', [
+      'id' => $this->primaryKey(),
+      'name' => $this->string(),
+      'password' => $this->string(),
 
-    /**
-     * {@inheritdoc}
-     */
-    public function safeDown()
-    {
-        $this->dropTable('{{%perfil}}');
-    }
+    ]);
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function safeDown()
+  {
+    $this->dropTable('{{%perfil}}');
+  }
 }

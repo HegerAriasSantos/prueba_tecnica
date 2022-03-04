@@ -2,10 +2,6 @@
 
 namespace common\models\query;
 
-use yii\base\Behavior;
-use yii\behaviors\BlameableBehavior;
-use yii\behaviors\TimestampBehavior;
-
 /**
  * This is the ActiveQuery class for [[\common\models\Client]].
  *
@@ -17,15 +13,6 @@ class ClientQuery extends \yii\db\ActiveQuery
     {
         return $this->andWhere('[[status]]=1');
     }*/
-    public function behaviors(){
-      return [
-        TimestampBehavior::class,
-        [
-          'class'=> BlameableBehavior::class,
-          'updatedByAttribute' => false
-        ]
-        ];
-    }
 
     /**
      * {@inheritdoc}

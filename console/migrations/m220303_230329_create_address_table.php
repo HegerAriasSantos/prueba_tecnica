@@ -7,23 +7,23 @@ use yii\db\Migration;
  */
 class m220303_230329_create_address_table extends Migration
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function safeUp()
-    {
-        $this->createTable('{{%address}}', [
-            'id' => $this->primaryKey(),
-            'province' =>$this->string(),
-            'city'=> $this->string()
-        ]);
-    }
+  /**
+   * {@inheritdoc}
+   */
+  public function safeUp()
+  {
+    $this->createTable('{{%address}}', [
+      'id' => $this->primaryKey(),
+      'province' => $this->string(),
+      'city' => $this->string(),
+    ]);
+  }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function safeDown()
-    {
-        $this->dropTable('{{%address}}');
-    }
+  /**
+   * {@inheritdoc}
+   */
+  public function safeDown()
+  {
+    $this->dropTable('{{%address}}');
+  }
 }

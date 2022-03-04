@@ -2,10 +2,10 @@
 
 namespace frontend\controllers;
 
-use common\models\Perfil;
+use frontend\resource\Perfil;
 use yii\rest\ActiveController;
 
-class PerfilController extends ActiveController{
+class PerfilController extends ActiveController
+{
   public $modelClass = Perfil::class;
 };
-
