@@ -25,7 +25,6 @@ class Client extends \yii\db\ActiveRecord
     return '{{%client}}';
   }
 
-
   /**
    * {@inheritdoc}
    */

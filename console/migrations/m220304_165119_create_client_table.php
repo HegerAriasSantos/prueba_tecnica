@@ -19,7 +19,10 @@ class m220304_165119_create_client_table extends Migration
       'perfil_id' => $this->integer(),
       'address_id' => $this->integer(),
     ]);
+    $this->createIndex('idx_client_perfil_id', '{{%client}}', 'perfil_id');
     $this->addForeignKey('FK_client_perfil_perfil_id', '{{%client}}', 'perfil_id', '{{%perfil}}', 'id');
+
+    $this->createIndex('idx_client_address_id', '{{%client}}', 'address_id');
     $this->addForeignKey('FK_client_address_address_id', '{{%client}}', 'address_id', '{{%address}}', 'id');
   }
 
@@ -28,6 +31,10 @@ class m220304_165119_create_client_table extends Migration
    */
   public function safeDown()
   {
+    $this->dropIndex('idx_client_perfil_id', '{{%client}}');
+    $this->dropIndex('idx_client_address_id', '{{%client}}');
+    $this->dropForeignKey('FK_client_perfil_perfil_id', '{{%client}}');
+    $this->dropForeignKey('FK_client_address_address_id', '{{%client}}');
     $this->dropTable('{{%client}}');
   }
 }

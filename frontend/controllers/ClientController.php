@@ -2,7 +2,7 @@
 
 namespace frontend\controllers;
 
-use common\models\Client;
+use frontend\resource\Client;
 use yii\rest\ActiveController;
 
 class ClientController extends ActiveController
