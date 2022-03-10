@@ -16,7 +16,6 @@ class m220303_230319_create_perfil_table extends Migration
       'id' => $this->primaryKey(),
       'name' => $this->string(),
       'password' => $this->string(),
-
     ]);
   }
 

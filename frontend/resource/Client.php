@@ -10,4 +10,8 @@ class Client extends \common\models\Client
   {
     return ['id', 'first_name', 'perfil', 'address'];
   }
+  public function extraFields()
+  {
+    return ['address_id', 'perfil_id'];
+  }
 };
